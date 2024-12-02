@@ -10,7 +10,7 @@
 
   --backgrund-text-color: var(--soft-color-1);
   --base-text-color: var(--dark-color-3);
-
+  
   --accent-color: var(--soft-color-1);    
 
   --menu-color: var(--dark-color-3);
@@ -22,7 +22,7 @@
 
 
 @media (prefers-color-scheme: light) {
-  :root {  
+  :root {
     --rec-status: var(--icon-rec-theme-light);
     --background-image: var(--background-light-image);
     --background-color: var(--soft-color-4);
@@ -34,7 +34,7 @@
   
     --backgrund-text-color: var(--soft-color-1);
     --base-text-color: var(--dark-color-3);
-  
+    
     --accent-color: var(--soft-color-1);    
   
     --menu-color: var(--dark-color-3);
