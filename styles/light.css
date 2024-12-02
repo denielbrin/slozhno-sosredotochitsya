@@ -11,8 +11,8 @@
   --backgrund-text-color: var(--soft-color-1);
   --base-text-color: var(--dark-color-3);
   
-  --accent-color: var(--soft-color-1);    
-
+  --accent-color: var(--soft-color-1);
+  
   --menu-color: var(--dark-color-3);
 
   --angles-style: var(--angles-for-theme-light);
@@ -35,8 +35,8 @@
     --backgrund-text-color: var(--soft-color-1);
     --base-text-color: var(--dark-color-3);
     
-    --accent-color: var(--soft-color-1);    
-  
+    --accent-color: var(--soft-color-1);
+    
     --menu-color: var(--dark-color-3);
 
     --angles-style: var(--angles-for-theme-light);
