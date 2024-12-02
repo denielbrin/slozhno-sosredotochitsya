@@ -1,12 +1,45 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --rec-status: var(--icon-rec-theme-dark);
+  --background-image: var(--background-dark-image);
+  --background-color: var(--dark-color-1);
+
+  --title-text-color: var(--bright-color-2);
+  --description-text-color: var(--dark-color-1);
+  --subtitle-text-color: var(--bright-color-1);
+  --card-title-text-color: var(--dark-color-1);
+
+  --backgrund-text-color: var(--bright-color-1);
+  --base-text-color: var(--soft-color-2);
+
+  --accent-color: var(--bright-color-1);
+
+  --menu-color: var(--bright-color-1);
+
+  --angles-style: var(--angles-for-theme-dark);
+
+  --menu-hover-style: var(--menu-hover-theme-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rec-status: var(--icon-rec-theme-dark);
+    --background-image: var(--background-dark-image);
+    --background-color: var(--dark-color-1);
+  
+    --title-text-color: var(--bright-color-2);
+    --description-text-color: var(--dark-color-1);
+    --subtitle-text-color: var(--bright-color-1);
+    --card-title-text-color: var(--dark-color-1);
+  
+    --backgrund-text-color: var(--bright-color-1);
+    --base-text-color: var(--soft-color-2);
+  
+    --accent-color: var(--bright-color-1);
+  
+    --menu-color: var(--bright-color-1);
+  
+    --angles-style: var(--angles-for-theme-dark);
+  
+    --menu-hover-style: var(--menu-hover-theme-dark);
+}
 }

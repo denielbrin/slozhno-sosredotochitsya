@@ -1,4 +1,57 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+
+  /* базовые переменные */
+
+  --soft-color-1: #ff8dcb;
+  --soft-color-2: #f1b2ce;
+  --soft-color-3: #ffc2e6;
+  --soft-color-4: #fff1f7;
+
+  --bright-color-1: #ff0070;
+  --bright-color-2: #db00ff;
+  --bright-color-3: #ff007040; 
+  --bright-color-4: #FF007066;
+
+  --dark-color-1: #000028;
+  --dark-color-2: #35343040;
+  --dark-color-3: #353430;
+
+  --font-family: "IBM Plex mono", monospace;
+  --base-font-size: 18px;
+
+  --main-padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+
+  --background-dark-image: url("../images/cover-image-dark.png");
+  --background-light-image: url("../images/cover-image-light.png");
+
+  --icon-rec-theme-dark: visible;
+  --icon-rec-theme-light: hidden;
+
+  --angles-for-theme-dark: var(--bright-color-1);
+  --angles-for-theme-light: var(--dark-color-3);
+
+  --menu-hover-theme-dark: #FF007066;
+  --menu-hover-theme-light: #32312D66;
+
+  /* переменные для основной (темной) темы */
+
+  --rec-status: var(--icon-rec-theme-dark);
+  --background-image: var(--background-dark-image);
+  --background-color: var(--dark-color-1);
+
+  --title-text-color: var(--bright-color-2);
+  --description-text-color: var(--dark-color-1);
+  --subtitle-text-color: var(--bright-color-1);
+  --card-title-text-color: var(--dark-color-1);
+
+  --backgrund-text-color: var(--bright-color-1);
+  --base-text-color: var(--soft-color-2);
+
+  --accent-color: var(--bright-color-1);
+
+  --menu-color: var(--bright-color-1);
+
+  --angles-style: var(--angles-for-theme-dark);
+
+  --menu-hover-style: var(--menu-hover-theme-dark);
+}

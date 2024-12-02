@@ -1,5 +1,329 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* --- Шапка --- */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: 100vh;
+  align-items: center;
+  padding: var(--main-padding);
+  position: relative;
+}
+
+.angles_style::before {
+  content:"";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--angles-style);
+  border-bottom: 1px solid var(--angles-style);
+  bottom: var(--main-padding);
+  left: var(--main-padding);
+} 
+
+.angles_style::after {
+  content:"";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--angles-style);
+  border-top: 1px solid var(--angles-style);
+  top: var(--main-padding);
+  right: var(--main-padding);
+}
+
+.title_style {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--title-text-color);
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--bright-color-1);
+}
+
+.header__theme-menu {
+  justify-self: end; 
+  align-self: center; 
+  color: var(--menu-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  min-inline-size: 70px;
+  block-size: 26px;
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__description {
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--description-text-color);
+}
+
+.rec__container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  right: calc(var(--main-padding) + 10px);
+  top: var(--main-padding);
+  visibility: var(--rec-status);
+}
+
+.rec__container::before {
+  content: "REC";
+  color: var(--accent-color);
+  line-height: 24px;
+}
+
+.rec__container::after {
+  content: "";
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--accent-color);
+  background: var(--accent-color);
+  width: 9px;
+  height: 9px;
+}
+
+/* --- адаптивность header --- */
+
+@media (width >= 768px) {
+  .header {
+    padding-left: 0;
+  }
+  .header__description {
+    width: calc(50% - (var(--main-padding) / 2));
+    justify-self: end;
+  }
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center; 
+    align-self: start;
+    margin-left: var(--main-padding);
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+}
+
+/* ---------------- стилизация кнопок меню и их состояний --------------- */
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-hover-style);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px solid var(--menu-hover-style);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--menu-color);
+  pointer-events: none;
+}
+
+/* --- main --- */
+
+.content_block {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+  display: grid;
+  gap: 50px;
+  color: var(--base-text-color);
+}
+
+/* --- Общие стили для секций внутри main --- */
+
+.special_box_for_section,
+.list_style,
+.section_style {
+  display: grid;
+  gap: 20px;
+}
+
+.untitle_style {
+  font-size: 18px;
+  color: var(--subtitle-text-color);
+}
+
+.list_item_style {
+  display: grid;
+  gap: 10px;
+}
+
+.list_item_untitle {
+  color: var(--card-title-text-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+}
+
+/* --- Секция 1 --- */
+
+/* --- Адаптивность первой секции --- */
+
+@media (width >= 768px) {
+  .content_block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section_why {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (width >= 1024px) {
+  .section_why {
+    grid-template-columns: 3.2fr 6.6fr;
+  }
+}
+
+/* --- Секция 2 --- */
+
+/* --- Адаптивность второй секции --- */
+
+@media (width >= 768px) {
+  .content_block {
+    gap: 80px;
+  }
+  .untitle_what {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .list_what {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Секция 3 --- */
+
+.list_how_item_untitle {
+  font-weight: 400;
+}
+
+/* --- Адаптивность третьей секции --- */
+
+@media (width >= 768px) {
+  .section_how {
+    grid-template-columns: 3.3fr 6.6fr;
+  }
+}
+
+@media (width >= 1024px) {
+  .section_how {
+    grid-template-columns: 3.2fr 6.6fr;
+  }
+}
+
+/* ------------------- Секция 4. Галерея --------------------- */
+
+.galery_photo {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Адаптивность секции 4  --- */
+
+@media (width >= 768px) {
+  .list_galery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .section_galery {
+    gap: 20px;
+   }
+   .galery_item:first-child {
+    grid-column-start: span 2;
+   }
+  .galery_item:nth-child(2) {
+    grid-row-start: span 2;
+  }
+  .galery_item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+  .galery_item:last-child {
+    grid-column-start: span 2;
+  }
+}
+
+/* --- Подвал --- */
+
+.footer {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  padding: var(--main-padding);
+  position: relative;
+}
+
+.footer_tittle {
+  text-shadow: 2px 2px 0 var(--bright-color-1);
+}
+
+/* --- Адаптивность подвала --- */
+
+@media (width >= 768px) {
+  .footer_tittle {
+   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+/* --- Ссылки в тексте --- */
+
+.text_link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+  outline: none;
+}
+
+.text_link:hover {
+  text-decoration: underline;
+}
+
+.text_link:focus {
+  border: 1px solid;
+}
+
+.text_link:active {
+  border: none;
 }
