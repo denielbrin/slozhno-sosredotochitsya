@@ -18,6 +18,8 @@
   --angles-style: var(--angles-for-theme-dark);
 
   --menu-hover-style: var(--menu-hover-theme-dark);
+
+  --link-underline: var(--link-inderline-theme-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,5 +43,7 @@
     --angles-style: var(--angles-for-theme-dark);
   
     --menu-hover-style: var(--menu-hover-theme-dark);
+
+    --link-underline: var(--link-inderline-theme-dark);
 }
 }

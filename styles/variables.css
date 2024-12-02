@@ -30,8 +30,11 @@
   --angles-for-theme-dark: var(--bright-color-1);
   --angles-for-theme-light: var(--dark-color-3);
 
-  --menu-hover-theme-dark: #FF007066;
-  --menu-hover-theme-light: #32312D66;
+  --menu-hover-theme-dark: var(--bright-color-1);
+  --menu-hover-theme-light: var(--dark-color-3);
+
+  --link-inderline-theme-dark: var(--soft-color-2);
+  --link-underline-theme-light: var(--dark-color-3);
 
   /* переменные для основной (темной) темы */
 
@@ -54,4 +57,6 @@
   --angles-style: var(--angles-for-theme-dark);
 
   --menu-hover-style: var(--menu-hover-theme-dark);
+
+  --link-underline: var(--link-inderline-theme-dark);
 }

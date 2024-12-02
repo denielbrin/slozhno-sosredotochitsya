@@ -18,6 +18,8 @@
   --angles-style: var(--angles-for-theme-light);
 
   --menu-hover-style: var(--menu-hover-theme-light);
+
+  --link-underline: var(--link-underline-theme-light);
 }
 
 
@@ -42,5 +44,7 @@
     --angles-style: var(--angles-for-theme-light);
 
     --menu-hover-style: var(--menu-hover-theme-light);
+
+    --link-underline: var(--link-underline-theme-light);
   }
 }
