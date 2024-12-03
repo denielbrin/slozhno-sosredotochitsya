@@ -1,1 +1,3 @@
-https://github.com/denielbrin/slozhno-sosredotochitsya.git
+опубликованный проект:
+
+https://denielbrin.github.io/slozhno-sosredotochitsya/
